@@ -2,6 +2,7 @@
 //configuración del namespace
 namespace App;
 
+
 class Post 
 {   
 
