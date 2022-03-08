@@ -1,39 +1,11 @@
 <?php
 
-abstract class Base
-{
-    protected $name;
-    private  function getClassName()
-    {
-        return get_called_class();
-    }
-    public function login()
-    {
-        return "Mi nombre es $this->name desde la clase {$this->getClassName()}";
-    }
+include "Base.php";
+include "Admin.php";
+include "User.php";
+include "Guest.php";
 
-}
 
-class Admin extends Base 
-{
-    public function __construct($name)
-    {
-        $this->name = $name;
-        
-    }
-}
-class User extends Base 
-{
-    public function __construct($name)
-    {
-        $this->name = $name;
-        
-    }
-}
-class Guest extends Base 
-{
-    protected $name = "invitado";
-}
 
 $guest = new Guest();
 echo $guest-> login();
