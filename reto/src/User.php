@@ -3,7 +3,7 @@ namespace App;
 
 class User 
 {
-    protected $username;
+    public $username;
     protected $email;
     protected $password;
 
