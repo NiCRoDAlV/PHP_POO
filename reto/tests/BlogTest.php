@@ -14,10 +14,10 @@ class BlogTest extends TestCase
         $post = new Post();
 
         //A estos objetos hay que darles email, username y password
-        $user = new User("oaisndf", "asdfasd", "asdfsadf");
-        $author = new Author("cadscs", "vfav", "asdfasg");
-        $category = new Category("asdafas", "asdfasdf");
-        $comment = new Comment("ASDfasdf", "asdfasd");
+        $user = new User("nombre_usuario", "correo_electronico", "contraseña");
+        $author = new Author($user->username, "correo_electronico", "contraseña");
+        $category = new Category("nombre_categoria");
+        $comment = new Comment("12/2/23", "cuerpo_del_comentario","autor_comentario");
         $post->addComment($comment);
 
         //Con assertEquals() verificamos la existencia del post

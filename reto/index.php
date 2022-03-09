@@ -12,7 +12,7 @@ $author = new Author($user->username, "correo_electronico", "contraseña");
 
 //Category lleva nombre
 $category = new Category("nombre_categoria");
-$comment = new Comment("ASDfasdf", "asdfasd");
+$comment = new Comment("12/2/23", "cuerpo_del_comentario","autor_comentario");
 $post->addComment($comment);
 
 //Con assertEquals() verificamos la existencia del post
